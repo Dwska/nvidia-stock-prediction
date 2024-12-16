@@ -1,8 +1,0 @@
-docker run -dt \
--p 9000:9000 -p 9001:9001 \
--v ProjectMLOps:/data \
---env-file Minio\Minio.env \
---name "minio_local" \
-minio/minio:RELEASE.2024-10-02T17-50-41Z server /data --console-address ":9001"
-
-docker run -dt -p 9000:9000 -p 9001:9001 -v ProjectMLOps:/data --env-file Minio\Minio.env --name "minio_local" minio/minio:RELEASE.2024-10-02T17-50-41Z server /data --console-address ":9001"

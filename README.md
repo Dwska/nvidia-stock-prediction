@@ -1,5 +1,6 @@
 # Project Setup and Usage Guide
-This project run locally and you need Docker to run it.
+- This project run locally and you need Docker to run it.
+- The files to initialize the container are in the root folder
 
 ## Project Directory Structure
 ```sh

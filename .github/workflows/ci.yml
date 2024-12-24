@@ -28,5 +28,7 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: Run tests
+        env:
+          PYTHONPATH: ./notebook
         run: |
-          pytest --cov=src tests/
+          pytest --cov=./tests

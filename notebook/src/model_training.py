@@ -18,7 +18,7 @@ def tune_prophet_hyperparameters(data, params_grid):
         if current_mse < best_mse:
             best_params = params.copy()
             best_mse = current_mse
-
+    
     return best_params, best_mse
 
 def train_final_model(data, best_hyperparams):

@@ -23,7 +23,7 @@
 2. **Access MinIO UI**:
 - Open your web browser and navigate to [http://localhost:9000](http://localhost:9000).
 - Log in with the MinIO credentials(you can find it the Docker-Compose.YAML).
-- Create two buckets: mlflow and stocks.
+- Create two buckets with these two specific names: mlflow and stocks.
 - Add data versioning to the stocks bucket.
 
 3. **Prepare Jupyter Notebook**:

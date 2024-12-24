@@ -3,3 +3,5 @@
 /notebook/.ipynb_checkpoints
 /notebook/predict
 /notebook/nvidia_stock_prices.csv
+
+__pycache__

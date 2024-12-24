@@ -1,5 +1,5 @@
 import pandas as pd
-from notebook.src.model_training import tune_prophet_hyperparameters
+from src.model_training import tune_prophet_hyperparameters
 
 def test_tune_prophet_hyperparameters():
     data = pd.DataFrame({

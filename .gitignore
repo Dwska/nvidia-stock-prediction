@@ -5,3 +5,4 @@
 /notebook/nvidia_stock_prices.csv
 
 __pycache__
+.pytest_cache

@@ -1,5 +1,5 @@
 import os
-from notebook.src.data_processing import load_and_preprocess_data
+from src.data_processing import load_and_preprocess_data
 
 def test_load_and_preprocess_data():
     mock_data = "Date,Close\n2022-01-01,100\n2022-01-02,101"

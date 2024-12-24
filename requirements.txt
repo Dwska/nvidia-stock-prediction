@@ -1,0 +1,7 @@
+mlflow
+boto3
+psycopg2-binary
+pandas
+matplotlib
+scikit-learn
+prophet

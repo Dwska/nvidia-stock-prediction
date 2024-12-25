@@ -1,5 +1,5 @@
 # Project Setup and Usage Guide
-- This project run locally and you need Docker to run it.
+- This project runs locally and you need Docker to run it.
 - The files to initialize the container are in the docker directory
 
 ## Project Directory Structure
@@ -29,14 +29,25 @@
 ```
 
 ## Getting Started
-1. **Build and Start Containers**
+1. **Clone the Project**
 
-   Open your terminal and run the following command to build and start the Docker containers:
-   ```sh
+   Open your terminal and run the following command:
+   ```bash
+    git clone https://github.com/Dwska/nvidia-stock-prediction.git
+   ```
+   After successful cloning, navigate to the project directory
+   ```bash
+    cd nvidia-stock-prediction/
+   ```
+   
+3. **Build and Start Containers**
+
+   Run the following command to build and start the Docker containers (make sure your Docker is running):
+   ```bash
     docker-compose up --build -d
    ```
 
-2. **Create `.env` File**
+4. **Create `.env` File**
    
    Copy this environment variables to be able to run the project (or use your own credentials if present)
    ```.env
@@ -56,19 +67,20 @@
     MLFLOW_ARTIFACT_BUCKET=mlflow
    ```
 
-2. **Access MinIO UI**:
+5. **Access MinIO UI**:
    - Open your web browser and navigate to [http://localhost:9000](http://localhost:9000).
    - Log in with the MinIO credentials (defined in `.env` file).
    - Create two buckets with these two specific names: ***mlflow*** and ***stocks*** (case sensitive).
    - Enable data versioning to the ***stocks*** bucket.
+   - Try to upload [the dataset](https://www.kaggle.com/datasets/jvanark/nvidia-daily-stock-price-data?resource=download) in CSV format
 
-4. **Prepare Jupyter Notebook**:
+6. **Prepare Jupyter Notebook**:
    - Access Jupyter Lab by navigating to [http://localhost:8888](http://localhost:8888) in your web browser.
    - Log in with the lab token (defined in `.env` file).
    - In Jupyter Lab, the notebooks are in the "work" folder inside the Jupyter environment.
    - To get prediction, run `nvidia_reg.ipynb`. It will download the dataset from MinIO, process the data, and deploy the model to MLflow
 
-5. **Track Models with MLflow**:
+7. **Track Models with MLflow**:
    - Access MLflow UI by navigating to [http://localhost:5000](http://localhost:5000) in your web browser.
    - Log in with the MLflow credentials (defined in `.env` file).
    - After running your script, you can check the experiment results and model deployments in the MLflow UI.

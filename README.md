@@ -40,14 +40,7 @@
     cd nvidia-stock-prediction/
    ```
    
-3. **Build and Start Containers**
-
-   Run the following command to build and start the Docker containers (make sure your Docker is running):
-   ```bash
-    docker-compose up --build -d
-   ```
-
-4. **Create `.env` File**
+2. **Create `.env` File**
    
    Copy this environment variables to be able to run the project (or use your own credentials if present)
    ```.env
@@ -66,21 +59,28 @@
     FORWARD_DB_PORT=5432
     MLFLOW_ARTIFACT_BUCKET=mlflow
    ```
+   
+3. **Build and Start Containers**
 
-5. **Access MinIO UI**:
+   Run the following command to build and start the Docker containers (make sure your Docker is running):
+   ```bash
+    docker-compose up --build -d
+   ```
+
+4. **Access MinIO UI**:
    - Open your web browser and navigate to [http://localhost:9000](http://localhost:9000).
    - Log in with the MinIO credentials (defined in `.env` file).
    - Create two buckets with these two specific names: ***mlflow*** and ***stocks*** (case sensitive).
    - Enable data versioning to the ***stocks*** bucket.
    - Try to upload [the dataset](https://www.kaggle.com/datasets/jvanark/nvidia-daily-stock-price-data?resource=download) in CSV format
 
-6. **Prepare Jupyter Notebook**:
+5. **Prepare Jupyter Notebook**:
    - Access Jupyter Lab by navigating to [http://localhost:8888](http://localhost:8888) in your web browser.
    - Log in with the lab token (defined in `.env` file).
    - In Jupyter Lab, the notebooks are in the "work" folder inside the Jupyter environment.
    - To get prediction, run `nvidia_reg.ipynb`. It will download the dataset from MinIO, process the data, and deploy the model to MLflow
 
-7. **Track Models with MLflow**:
+6. **Track Models with MLflow**:
    - Access MLflow UI by navigating to [http://localhost:5000](http://localhost:5000) in your web browser.
    - Log in with the MLflow credentials (defined in `.env` file).
    - After running your script, you can check the experiment results and model deployments in the MLflow UI.
